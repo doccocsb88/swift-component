@@ -11,6 +11,11 @@ import FBSDKLoginKit
 class ViewController: UIViewController {
 
     var btnFBLogin: FBSDKLoginButton?
+    
+    @IBOutlet weak var btnFaceBook: UIButton!
+    
+    @IBOutlet weak var btnVideo: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         btnFBLogin = FBSDKLoginButton(frame: CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width,50))
@@ -23,11 +28,7 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if (FBSDKAccessToken.currentAccessToken() != nil){
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewcontroller = storyboard.instantiateViewControllerWithIdentifier("fbComponent")
-            self.presentViewController(viewcontroller, animated: true, completion: nil)
-        }
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +36,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func pressedVideo(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewcontroller = storyboard.instantiateViewControllerWithIdentifier("videoPlayerViewController") as? VideoPlayerViewController{
+        self.presentViewController(viewcontroller, animated: true, completion: nil)
+        }
+    }
 
+    @IBAction func pressedFacebook(sender: AnyObject) {
+        if (FBSDKAccessToken.currentAccessToken() != nil){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewcontroller = storyboard.instantiateViewControllerWithIdentifier("fbComponent")
+            self.presentViewController(viewcontroller, animated: true, completion: nil)
+        }
+    }
 }
 

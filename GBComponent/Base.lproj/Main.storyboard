@@ -82,17 +82,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNB-Zr-tYi">
+                                <rect key="frame" x="250" y="410" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3Rl-hx-4bm"/>
+                                    <constraint firstAttribute="height" constant="30" id="c2O-p9-dFD"/>
+                                </constraints>
+                                <state key="normal" title="FACEBOOK"/>
+                                <connections>
+                                    <action selector="pressedFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NfD-tL-Qtg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqK-n8-aQl">
+                                <rect key="frame" x="250" y="460" width="100" height="30"/>
+                                <state key="normal" title="VIDEO"/>
+                                <connections>
+                                    <action selector="pressedVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNJ-GG-LIy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="JqK-n8-aQl" firstAttribute="width" secondItem="bNB-Zr-tYi" secondAttribute="width" id="5sU-ii-CbL"/>
                             <constraint firstItem="3uj-SG-JQk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8t6-ZP-YyY"/>
                             <constraint firstItem="3uj-SG-JQk" firstAttribute="top" secondItem="4e7-9Z-Jhr" secondAttribute="bottom" constant="30" id="CAG-W0-GoL"/>
+                            <constraint firstItem="JqK-n8-aQl" firstAttribute="centerX" secondItem="bNB-Zr-tYi" secondAttribute="centerX" id="Cgg-oS-miN"/>
                             <constraint firstItem="4e7-9Z-Jhr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FBC-as-epE"/>
                             <constraint firstItem="tHZ-7e-tq2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KLy-MA-Gf8"/>
+                            <constraint firstItem="JqK-n8-aQl" firstAttribute="top" secondItem="bNB-Zr-tYi" secondAttribute="bottom" constant="20" id="Rv6-jN-psG"/>
+                            <constraint firstItem="bNB-Zr-tYi" firstAttribute="top" secondItem="tHZ-7e-tq2" secondAttribute="bottom" constant="30" id="Woc-Qp-Ngj"/>
                             <constraint firstItem="3uj-SG-JQk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="itb-pd-Ry1"/>
                             <constraint firstItem="tHZ-7e-tq2" firstAttribute="top" secondItem="3uj-SG-JQk" secondAttribute="bottom" constant="20" id="lsY-lS-rkp"/>
+                            <constraint firstItem="bNB-Zr-tYi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oRb-Re-Cu5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnFaceBook" destination="bNB-Zr-tYi" id="b7R-sd-yVf"/>
+                        <outlet property="btnVideo" destination="JqK-n8-aQl" id="Mm5-8H-Blv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,6 +252,53 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZE-Cv-bwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Video Player View Controller-->
+        <scene sceneID="Ez1-SR-FsR">
+            <objects>
+                <viewController storyboardIdentifier="videoPlayerViewController" id="HPt-NP-qFv" customClass="VideoPlayerViewController" customModule="GBComponent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pP4-L6-ynU"/>
+                        <viewControllerLayoutGuide type="bottom" id="BKY-ev-D06"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HZF-W6-cBV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A79-tf-K78">
+                                <rect key="frame" x="0.0" y="320" width="600" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="tKQ-S8-Jxx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojD-MJ-Jab">
+                                <rect key="frame" x="20" y="30" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="57J-8U-Lfd"/>
+                                    <constraint firstAttribute="width" constant="50" id="baV-Ng-J3K"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="pressedBack:" destination="HPt-NP-qFv" eventType="touchUpInside" id="UWY-wh-zyj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A79-tf-K78" firstAttribute="top" secondItem="pP4-L6-ynU" secondAttribute="bottom" constant="300" id="90c-aN-njs"/>
+                            <constraint firstItem="ojD-MJ-Jab" firstAttribute="top" secondItem="pP4-L6-ynU" secondAttribute="bottom" constant="10" id="RRv-NC-m8l"/>
+                            <constraint firstAttribute="trailing" secondItem="A79-tf-K78" secondAttribute="trailing" id="TFp-Jm-bp9"/>
+                            <constraint firstItem="A79-tf-K78" firstAttribute="leading" secondItem="HZF-W6-cBV" secondAttribute="leading" id="ikg-nC-MfS"/>
+                            <constraint firstItem="ojD-MJ-Jab" firstAttribute="leading" secondItem="HZF-W6-cBV" secondAttribute="leading" constant="20" id="iuT-XC-a8r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoContainer" destination="A79-tf-K78" id="WIy-Uv-caB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="has-P3-sd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

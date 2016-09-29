@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BAD528E86D3B1CF94D5CCB7A /* Pods_GBComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A07BFE0EE4BCD200E4D898F /* Pods_GBComponent.framework */; };
+		FA01AB5C1D9CBF0C00D233DD /* GBVideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA01AB5B1D9CBF0C00D233DD /* GBVideoPlayerView.xib */; };
+		FA01AB5E1D9CBF2400D233DD /* GBVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01AB5D1D9CBF2400D233DD /* GBVideoPlayerView.swift */; };
+		FA01AB601D9CC32500D233DD /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01AB5F1D9CC32500D233DD /* VideoPlayerViewController.swift */; };
+		FA01AB621D9CD6B300D233DD /* toystory.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FA01AB611D9CD5E300D233DD /* toystory.mp4 */; };
 		FA0543CD1D9B9A9200424D5F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0543CA1D9B9A9200424D5F /* FBSDKCoreKit.framework */; };
 		FA0543CE1D9B9A9200424D5F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0543CB1D9B9A9200424D5F /* FBSDKLoginKit.framework */; };
 		FA0543CF1D9B9A9200424D5F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0543CC1D9B9A9200424D5F /* FBSDKShareKit.framework */; };
@@ -28,6 +32,10 @@
 		3A07BFE0EE4BCD200E4D898F /* Pods_GBComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2AE094BF0D40439CB55A2D /* Pods-GBComponent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBComponent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GBComponent/Pods-GBComponent.debug.xcconfig"; sourceTree = "<group>"; };
 		EE4FDF932D8B256C805D24BD /* Pods-GBComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBComponent.release.xcconfig"; path = "Pods/Target Support Files/Pods-GBComponent/Pods-GBComponent.release.xcconfig"; sourceTree = "<group>"; };
+		FA01AB5B1D9CBF0C00D233DD /* GBVideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBVideoPlayerView.xib; sourceTree = "<group>"; };
+		FA01AB5D1D9CBF2400D233DD /* GBVideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GBVideoPlayerView.swift; sourceTree = "<group>"; };
+		FA01AB5F1D9CC32500D233DD /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		FA01AB611D9CD5E300D233DD /* toystory.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = toystory.mp4; sourceTree = "<group>"; };
 		FA0543CA1D9B9A9200424D5F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-4.16.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		FA0543CB1D9B9A9200424D5F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-4.16.0/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		FA0543CC1D9B9A9200424D5F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FacebookSDKs-iOS-4.16.0/FBSDKShareKit.framework"; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 		FAE37BC11D9A4C9F00A0035C /* GBComponent */ = {
 			isa = PBXGroup;
 			children = (
+				FA01AB611D9CD5E300D233DD /* toystory.mp4 */,
 				FAE37BD61D9A4F0B00A0035C /* ic_five_star_normal.png */,
 				FAE37BD71D9A4F0B00A0035C /* ic_five_star_selected.png */,
 				FAE37BC21D9A4C9F00A0035C /* AppDelegate.swift */,
@@ -122,6 +131,9 @@
 				FAE37BDA1D9A5FAB00A0035C /* InputNumberView.swift */,
 				FAE37BDC1D9A6B0400A0035C /* GBVerticalButton.swift */,
 				FA0543D01D9B9FDD00424D5F /* FBComponent.swift */,
+				FA01AB5B1D9CBF0C00D233DD /* GBVideoPlayerView.xib */,
+				FA01AB5D1D9CBF2400D233DD /* GBVideoPlayerView.swift */,
+				FA01AB5F1D9CC32500D233DD /* VideoPlayerViewController.swift */,
 			);
 			path = GBComponent;
 			sourceTree = "<group>";
@@ -187,10 +199,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA01AB621D9CD6B300D233DD /* toystory.mp4 in Resources */,
 				FAE37BD81D9A4F0B00A0035C /* ic_five_star_normal.png in Resources */,
 				FAE37BD91D9A4F0B00A0035C /* ic_five_star_selected.png in Resources */,
 				FAE37BCD1D9A4C9F00A0035C /* LaunchScreen.storyboard in Resources */,
 				FAE37BCA1D9A4C9F00A0035C /* Assets.xcassets in Resources */,
+				FA01AB5C1D9CBF0C00D233DD /* GBVideoPlayerView.xib in Resources */,
 				FAE37BC81D9A4C9F00A0035C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +269,8 @@
 				FAE37BDD1D9A6B0400A0035C /* GBVerticalButton.swift in Sources */,
 				FA0543D11D9B9FDD00424D5F /* FBComponent.swift in Sources */,
 				FAE37BD51D9A4CAB00A0035C /* FiveStarRatingView.swift in Sources */,
+				FA01AB601D9CC32500D233DD /* VideoPlayerViewController.swift in Sources */,
+				FA01AB5E1D9CBF2400D233DD /* GBVideoPlayerView.swift in Sources */,
 				FAE37BC31D9A4C9F00A0035C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
